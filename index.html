@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon.svg" type="image/x-icon" />
     <title>Algoritmo CYK | Online</title>
   </head>
   <body>
@@ -21,23 +21,18 @@
       <div class="container-data">
         <label for="grammar">Gramática</label>
         <textarea id="grammar" cols="32" rows="10">
-S -> AB
-A -> CD | CF
-B -> c | EB
-C -> a
-D -> b
-E -> c
-F -> AD
+S -> AT| BU | XX | AB | BA | ε
+X -> AT | BU | XX | AB | BA
+T -> SB
+U -> SA
+A -> a
+B -> b
         </textarea>
         <label for="sentence">Sentença</label>
-        <input type="text" id="sentence" value="aaabbbcc" />
+        <input type="text" id="sentence" value="abaabb" />
         <button type="button" class="btn-parser">Analisar</button>
-        <label for="slide">Etapas: </label>
-        <input type="range" min="0" max="100" step="1" value="0" id="slide" />
       </div>
-      <div class="container-result">
-          <div class="xxx"></div>
-      </div>
+      <div class="container-result"></div>
     </main>
     <footer>
       <p>&copy; 2021 &dash; Todos os direitos reservados</p>

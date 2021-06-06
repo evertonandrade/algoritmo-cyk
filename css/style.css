@@ -14,6 +14,10 @@ html {
   --radius: 0.2rem;
 }
 
+body {
+  position: relative;
+}
+
 body,
 input,
 textarea,
@@ -98,12 +102,13 @@ hr {
 }
 
 footer {
-  width: 100%;
-  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 3.2rem;
+  padding: 0.2rem;
   border-top: 1px solid #ccc;
   text-align: center;
-  position: absolute;
-  bottom: 0;
 }
 
 header {
@@ -115,6 +120,40 @@ header {
 
 main {
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.container-data,
+.container-result {
+  padding: 1rem 2rem;
+}
+
+.container-result {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-parser {
+  margin: 1rem 0rem;
+}
+
+.accept,
+.reject {
+  width: 100%;
+  padding: 1rem;
+  display: block;
+  color: white;
+  text-align: center; 
+}
+
+.accept {
+  background: #4caf4fc4;
+}
+
+.reject {
+  background: #af4c4cc4;
 }
