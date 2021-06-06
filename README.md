@@ -9,7 +9,7 @@ $ git clone https://github.com/evertonandrade/algoritmo-cyk.git
 Acesse o diretório e em seguinda abra o `index.html` em qualquer browser.  
 
 ### Melhor Opção
-Acesse a aplicação em [algoritmocyk.netlify.app](https://algoritmocyk.netlify.app/)  
+Acesse a aplicação em **[algoritmocyk.netlify.app](https://algoritmocyk.netlify.app/)**  
 <img src="/assets/screenshots/site.png" />
 
 ## Objetivo
