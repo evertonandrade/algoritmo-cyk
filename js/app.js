@@ -1,7 +1,7 @@
 const grammar = document.querySelector('#grammar');
 const sentence = document.querySelector('#sentence');
 const button = document.querySelector('.btn-parser');
-const containerResult = document.querySelector('.container-result');
+const containerResult = document.querySelector('.terminal');
 
 function defineRules(grammar) {
   let arrGrammar = grammar.value.trim().split('\n');
@@ -70,17 +70,12 @@ function cykParser(sentence, rules, initialSymbol) {
 
 button.addEventListener('click', () => {
   const rules = defineRules(grammar);
-  console.log(rules);
   const w = sentence.value;
   const accept = cykParser(w, rules, 'S');
-  containerResult.innerHTML = '';
-  const result = document.createElement('p');
-  if (accept) {
-    result.classList.add('accept');
-    result.innerText = 'A cadeia é reconhecida!';
-  } else {
-    result.classList.add('reject');
-    result.innerText = 'A cadeia não é reconhecida!';
-  }
-  containerResult.appendChild(result);
+  containerResult.innerHTML = `
+    <span class="indicator">[user@Web]$</span> 
+    ./cyk_parser <br>
+    ${accept} <br>
+    <span class="indicator">[user@Web]$</span>
+  `;
 });
