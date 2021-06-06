@@ -52,20 +52,19 @@ function cykParser(sentence, rules, initialSymbol) {
     for (let i = 0; i < n - l + 1; i++) {
       let j = i + l - 1;
       for (let k = i; k < j; k++) {
-        //console.log(`(${i}, ${k})  (${k + 1}, ${j}) - (${i} - ${j})`);
-        //T[i][j].add('&');
         for (let r in rules) {
-          let v1 = T[i][k]
-          let v2 = T[k+1][j]
-          
-          if(rules[r].includes('qqq')) T[i][j].add(r)
-  
+          rules[r].forEach(e => {
+            if (e.length === 2) {
+              let X = r;
+              let Y = e[0];
+              let Z = e[1];
+              if (T[i][k].has(Y) && T[k + 1][j].has(Z)) T[i][j].add(X);
+            }
+          });
         }
       }
     }
   }
-
-  console.log(T);
   return T[0][n - 1].has(initialSymbol);
 }
 
